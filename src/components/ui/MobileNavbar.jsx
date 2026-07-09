@@ -6,12 +6,12 @@ export default function MobileNavbar({ open, onClose }) {
 
   const links = [
     { path: "/", label: "Home" },
-    { path: "/About", label: "About" },
-    { path: "/onSkills", label: "Skills" },
-    { path: "/Projects", label: "Projects" },
-    { path: "/Gaming", label: "Gaming" },
-    { path: "/Resume", label: "Resume" },
-    { path: "/Contact", label: "Contact" }
+    { path: "/about", label: "About" },
+    { path: "/skills", label: "Skills" },
+    { path: "/projects", label: "Projects" },
+    { path: "/gaming", label: "Gaming" },
+    { path: "/resume", label: "Resume" },
+    { path: "/contact", label: "Contact" }
   ];
 
   return (

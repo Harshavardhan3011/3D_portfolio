@@ -444,7 +444,7 @@ export default function Home() {
                   Project <span className="text-emerald-400">Missions</span>
                 </h2>
               </div>
-              <Link to="/Projects">
+              <Link to="/projects">
                 <NeonButton variant="secondary">View All →</NeonButton>
               </Link>
             </div>
@@ -454,7 +454,7 @@ export default function Home() {
             {featuredProjects.map((p, i) => (
               <MotionWrapper key={p.slug} delay={0.1 * i} yOffset={20}>
                 <HoverTilt>
-                  <Link to="/Projects">
+                  <Link to="/projects">
                     <div
                       className="mission-card relative p-5 rounded-2xl group overflow-hidden"
                       style={{
@@ -540,7 +540,7 @@ export default function Home() {
             <p className="text-gray-400 text-sm max-w-md mx-auto">
               🔥 Free Fire Battle Royale &nbsp;•&nbsp; 👻 Horror Escapes &nbsp;•&nbsp; 🧟 Ghost Survival
             </p>
-            <Link to="/Gaming">
+            <Link to="/gaming">
               <NeonButton variant="primary">🎮 Enter Arena →</NeonButton>
             </Link>
           </div>
@@ -560,7 +560,7 @@ export default function Home() {
             Open for projects, collaborations, and opportunities. Reach out and let's create something great.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/Contact"><NeonButton variant="primary">📩 Contact Me</NeonButton></Link>
+            <Link to="/contact"><NeonButton variant="primary">📩 Contact Me</NeonButton></Link>
             <a href="mailto:harshavardhanvesalapu1@gmail.com">
               <NeonButton variant="secondary">📧 Send Email</NeonButton>
             </a>

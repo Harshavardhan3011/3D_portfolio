@@ -16,11 +16,11 @@ export default function WorldHub() {
 
   const zones = [
     { name: "Home Dashboard", slug: "home", path: "/", tech: ["Core", "Workstation"] },
-    { name: "Mission Intel", slug: "about", path: "/About", tech: ["Bio", "Academia"] },
-    { name: "Skills Galaxy", slug: "skills", path: "/onSkills", tech: ["Tech", "Nodes"] },
-    { name: "Combat Missions", slug: "projects", path: "/Projects", tech: ["Apps", "Demos"] },
-    { name: "Hologram CV", slug: "resume", path: "/Resume", tech: ["Data", "Downloads"] },
-    { name: "Terminal secure", slug: "contact", path: "/Contact", tech: ["Mail", "EmailJS"] }
+    { name: "Mission Intel", slug: "about", path: "/about", tech: ["Bio", "Academia"] },
+    { name: "Skills Galaxy", slug: "skills", path: "/skills", tech: ["Tech", "Nodes"] },
+    { name: "Combat Missions", slug: "projects", path: "/projects", tech: ["Apps", "Demos"] },
+    { name: "Hologram CV", slug: "resume", path: "/resume", tech: ["Data", "Downloads"] },
+    { name: "Terminal secure", slug: "contact", path: "/contact", tech: ["Mail", "EmailJS"] }
   ];
 
   return (
