@@ -54,7 +54,7 @@ export const projects = [
     ],
     tech: ["React", "Tailwind CSS", "Vite"],
     images: [hrms1, hrms2, hrms3, hrms4, hrms5, hrms6, hrms7],
-    link: "https://hrms-three-blue.vercel.app/login",
+    link: "https://human-resource-management-system-gold.vercel.app/login",
     github: null,
     year: 2025,
     type: "Web App",
