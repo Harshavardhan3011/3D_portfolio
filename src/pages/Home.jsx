@@ -4,8 +4,10 @@ import { zoroGifs, animeGifs } from "../data/mediaAssets";
 import MotionWrapper from "../components/animation/MotionWrapper";
 import NeonButton from "../components/ui/NeonButton";
 import HoverTilt from "../components/interactions/HoverTilt";
-import harsha from "./harsha.jpg";
 import { projects } from "../data/projects";
+
+// Profile image from public/assets/ (not src import — works on Vercel)
+const PROFILE_IMG = "/assets/profile/harsha.jpg";
 
 /* ── Floating badge row ──────────────────────────────────────── */
 const BADGES = [
@@ -19,11 +21,11 @@ const BADGES = [
 
 /* ── Quick Identity Cards ────────────────────────────────────── */
 const QUICK_CARDS = [
-  { icon: "💻", title: "Developer Mode", desc: "React · Python · Full Stack", path: "/About", color: "#00ff88", border: "border-emerald-500/30" },
-  { icon: "🧠", title: "Skill Matrix", desc: "18+ Skills · CS Core · Tools", path: "/onSkills", color: "#06b6d4", border: "border-cyan-500/30" },
-  { icon: "🚀", title: "Project Missions", desc: "HRMS · 3D Portfolio · Apps", path: "/Projects", color: "#a78bfa", border: "border-violet-500/30" },
-  { icon: "🎮", title: "Gaming Arena", desc: "Free Fire · Horror · Ghost", path: "/Gaming", color: "#f97316", border: "border-orange-500/30" },
-  { icon: "📄", title: "Resume Scanner", desc: "Education · Skills · Download", path: "/Resume", color: "#fbbf24", border: "border-yellow-500/30" },
+  { icon: "💻", title: "Developer Mode", desc: "React · Python · Full Stack", path: "/about", color: "#00ff88", border: "border-emerald-500/30" },
+  { icon: "🧠", title: "Skill Matrix", desc: "18+ Skills · CS Core · Tools", path: "/skills", color: "#06b6d4", border: "border-cyan-500/30" },
+  { icon: "🚀", title: "Project Missions", desc: "HRMS · 3D Portfolio · Apps", path: "/projects", color: "#a78bfa", border: "border-violet-500/30" },
+  { icon: "🎮", title: "Gaming Arena", desc: "Free Fire · Horror · Ghost", path: "/gaming", color: "#f97316", border: "border-orange-500/30" },
+  { icon: "📄", title: "Resume Scanner", desc: "Education · Skills · Download", path: "/resume", color: "#fbbf24", border: "border-yellow-500/30" },
 ];
 
 /* ── Cyber Control Center ────────────────────────────────────── */
@@ -161,10 +163,10 @@ export default function Home() {
               {/* CTA buttons */}
               <MotionWrapper delay={0.48} yOffset={20}>
                 <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                  <Link to="/Projects"><NeonButton variant="primary">🚀 View Projects</NeonButton></Link>
-                  <Link to="/Gaming"><NeonButton variant="secondary">🎮 Gaming Arena</NeonButton></Link>
-                  <Link to="/Resume"><NeonButton variant="secondary">📄 View Resume</NeonButton></Link>
-                  <Link to="/Contact"><NeonButton variant="secondary">📩 Contact Me</NeonButton></Link>
+                  <Link to="/projects"><NeonButton variant="primary">🚀 View Projects</NeonButton></Link>
+                  <Link to="/gaming"><NeonButton variant="secondary">🎮 Gaming Arena</NeonButton></Link>
+                  <Link to="/resume"><NeonButton variant="secondary">📄 View Resume</NeonButton></Link>
+                  <Link to="/contact"><NeonButton variant="secondary">📩 Contact Me</NeonButton></Link>
                 </div>
               </MotionWrapper>
 
@@ -219,9 +221,13 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={harsha}
+                        src={PROFILE_IMG}
                         alt="Harsha Vardhan — Full Stack Developer"
                         className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                          e.currentTarget.parentElement.style.background = "radial-gradient(circle, rgba(0,255,136,0.15), rgba(0,0,0,0.8))";
+                        }}
                       />
                       {/* Hologram overlay on image */}
                       <div

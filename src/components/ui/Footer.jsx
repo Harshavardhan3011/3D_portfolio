@@ -1,4 +1,5 @@
 import React from "react";
+import { socialLinks } from "../../data/socialLinks";
 
 export default function Footer() {
   return (
@@ -10,24 +11,37 @@ export default function Footer() {
           </p>
           <span className="text-gray-700">// CORE_VERSION_ZORO_2.0_SECURE</span>
         </div>
-        
+
         <div className="flex space-x-6 text-[10px] font-mono text-emerald-400">
           <a
-            href="https://www.instagram.com/itz_roronoa_zoro___?igsh=b2ZkYnExcDI2ZnJ0"
+            href={socialLinks.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-emerald-300 transition duration-200"
           >
             INSTAGRAM
           </a>
-          <a href="#" className="hover:text-emerald-300 transition duration-200">
-            TWITTER
-          </a>
-          <a href="#" className="hover:text-emerald-300 transition duration-200">
+          <a
+            href={socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-emerald-300 transition duration-200"
+          >
             GITHUB
           </a>
-          <a href="#" className="hover:text-emerald-300 transition duration-200">
+          <a
+            href={socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-emerald-300 transition duration-200"
+          >
             LINKEDIN
+          </a>
+          <a
+            href={socialLinks.emailHref}
+            className="hover:text-emerald-300 transition duration-200"
+          >
+            EMAIL
           </a>
         </div>
       </div>

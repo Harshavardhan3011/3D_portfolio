@@ -1,15 +1,14 @@
 import React from "react";
-import { usePortfolioStore } from "../../store/usePortfolioStore";
+import { useAudioController } from "../../hooks/useAudioController";
 
 export default function SoundToggle() {
-  const soundOn = usePortfolioStore((state) => state.soundOn);
-  const toggleSound = usePortfolioStore((state) => state.toggleSound);
+  const { soundOn, toggle } = useAudioController();
 
   return (
     <button
-      onClick={toggleSound}
+      onClick={toggle}
       className="p-2 rounded bg-black/85 border border-emerald-950 text-emerald-400 hover:border-emerald-500 transition pointer-events-auto"
-      title={soundOn ? "Mute Cyber Audio" : "Unmute Cyber Audio"}
+      title={soundOn ? "Pause Background Music" : "Play Background Music"}
     >
       <span className="font-mono text-[9px] uppercase tracking-wider">
         {soundOn ? "🔊 Audio: On" : "🔇 Audio: Off"}

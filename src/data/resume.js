@@ -4,8 +4,8 @@ export const resumeData = {
   role: "Full Stack Developer & Product Designer",
   email: "harshavardhanvesalapu1@gmail.com",
   location: "Gajuwaka, Visakhapatnam, AP — 530049",
-  linkedin: "https://linkedin.com/in/harsha-vardhan-vesalapu",
-  github: "https://github.com/harshavardhans",
+  linkedin: "https://www.linkedin.com/in/harshavardhanv",
+  github: "https://github.com/Harshavardhan3011",
   pdfPath: "/harsha_vardhan_resume.pdf",
 
   summary:

@@ -2,13 +2,16 @@ import React, { useState, useRef } from "react";
 import NeonButton from "../components/ui/NeonButton";
 import MotionWrapper from "../components/animation/MotionWrapper";
 import { zoroGifs } from "../data/mediaAssets";
+import { socialLinks } from "../data/socialLinks";
 import emailjs from "@emailjs/browser";
 
 const CONTACT_INFO = [
-  { icon: "📧", label: "Email", value: "harshavardhanvesalapu1@gmail.com", href: "mailto:harshavardhanvesalapu1@gmail.com" },
-  { icon: "📍", label: "Location", value: "Gajuwaka, Visakhapatnam, AP — 530049", href: null },
-  { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/harsha-vardhan", href: "https://linkedin.com/in/harsha-vardhan-vesalapu" },
-  { icon: "🧑‍💻", label: "GitHub", value: "github.com/harshavardhans", href: "https://github.com/harshavardhans" },
+  { icon: "📧", label: "Email", value: socialLinks.email, href: socialLinks.emailHref },
+  { icon: "📞", label: "Phone", value: socialLinks.phone, href: socialLinks.phoneHref },
+  { icon: "📍", label: "Location", value: socialLinks.location, href: null },
+  { icon: "🔗", label: "LinkedIn", value: "linkedin.com/in/harshavardhanv", href: socialLinks.linkedin },
+  { icon: "🧑‍💻", label: "GitHub", value: "github.com/Harshavardhan3011", href: socialLinks.github },
+  { icon: "📸", label: "Instagram", value: "@itz_roronoa_zoro___", href: socialLinks.instagram },
 ];
 
 export default function Contact() {

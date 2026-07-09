@@ -1,14 +1,13 @@
 // src/App.jsx
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import OnSkills from "./pages/onSkills";
+import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
-import Gaming from "./pages/Gaming"; 
+import Gaming from "./pages/Gaming";
 import Resume from "./pages/Resume";
-import Testimonials from "./pages/Testimonial";
 import Contact from "./pages/Contact";
 
 import LoadingScreen from "./components/intro/LoadingScreen";
@@ -31,11 +30,10 @@ export default function App() {
   const [introState, setIntroState] = useState("loading"); // "loading" | "showcase" | "entering" | "entered"
   const triggerUnlock = usePortfolioStore((state) => state.triggerUnlock);
 
-  // Check if intro has already been seen in this browser session/local storage
+  // Check if intro has already been seen in this session
   useEffect(() => {
     const hasSeen = localStorage.getItem("introSeen");
     if (hasSeen) {
-      // Subsequent visits start directly at the Enter World Showcase stage to save time, or can be skipped
       setIntroState("showcase");
     }
   }, []);
@@ -94,14 +92,27 @@ export default function App() {
 
           <Routes>
             <Route path="/" element={<Layout />}>
+              {/* Main lowercase routes */}
               <Route index element={<Home />} />
-              <Route path="About" element={<About />} />
-              <Route path="onSkills" element={<OnSkills />} />
-              <Route path="Projects" element={<Projects />} />
-              <Route path="Gaming" element={<Gaming />} /> 
-              <Route path="Resume" element={<Resume />} />
-              <Route path="Testimonials" element={<Testimonials />} />
-              <Route path="Contact" element={<Contact />} />
+              <Route path="about" element={<About />} />
+              <Route path="skills" element={<Skills />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="gaming" element={<Gaming />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="contact" element={<Contact />} />
+
+              {/* Compatibility redirects — old capitalized routes */}
+              <Route path="About" element={<Navigate to="/about" replace />} />
+              <Route path="onSkills" element={<Navigate to="/skills" replace />} />
+              <Route path="Skills" element={<Navigate to="/skills" replace />} />
+              <Route path="Projects" element={<Navigate to="/projects" replace />} />
+              <Route path="Gaming" element={<Navigate to="/gaming" replace />} />
+              <Route path="Resume" element={<Navigate to="/resume" replace />} />
+              <Route path="Testimonials" element={<Navigate to="/" replace />} />
+              <Route path="Contact" element={<Navigate to="/contact" replace />} />
+
+              {/* Wildcard — anything unknown goes Home */}
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
           </Routes>
 

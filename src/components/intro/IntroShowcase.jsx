@@ -3,12 +3,11 @@ import MotionWrapper from "../animation/MotionWrapper";
 import IntroBackgroundCycler from "./IntroBackgroundCycler";
 import NeonButton from "../ui/NeonButton";
 import { introShowcaseAssets } from "../../data/mediaAssets";
-import { usePortfolioStore } from "../../store/usePortfolioStore";
+import { useAudioController } from "../../hooks/useAudioController";
 
 export default function IntroShowcase({ onEnter, onSkip }) {
   const [activeIdx, setActiveIdx] = useState(0);
-  const soundOn = usePortfolioStore((state) => state.soundOn);
-  const toggleSound = usePortfolioStore((state) => state.toggleSound);
+  const { soundOn, toggle: toggleSound } = useAudioController();
 
   // Cycle background asset every 4 seconds
   useEffect(() => {

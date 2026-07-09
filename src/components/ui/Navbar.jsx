@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../../layout/Logo.png";
 
 const NAV_LINKS = [
-  { path: "/",           label: "Home",     end: true  },
-  { path: "/About",      label: "About",    end: false },
-  { path: "/onSkills",   label: "Skills",   end: false },
-  { path: "/Projects",   label: "Projects", end: false },
-  { path: "/Gaming",     label: "Gaming",   end: false },
-  { path: "/Resume",     label: "Resume",   end: false },
-  { path: "/Contact",    label: "Contact",  end: false },
+  { path: "/",         label: "Home",     end: true  },
+  { path: "/about",    label: "About",    end: false },
+  { path: "/skills",   label: "Skills",   end: false },
+  { path: "/projects", label: "Projects", end: false },
+  { path: "/gaming",   label: "Gaming",   end: false },
+  { path: "/resume",   label: "Resume",   end: false },
+  { path: "/contact",  label: "Contact",  end: false },
 ];
 
 export default function Navbar() {
@@ -39,20 +38,24 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-        {/* Logo */}
+        {/* Logo — using public/assets/Logo.png */}
         <Link to="/" className="flex items-center gap-2">
-          {logo ? (
-            <img
-              src={logo}
-              alt="Harsha.dev"
-              className="h-9 w-auto object-contain"
-              style={{ filter: "drop-shadow(0 0 6px rgba(0,255,136,0.7))" }}
-            />
-          ) : (
-            <span className="font-orbitron text-sm font-black text-emerald-400 tracking-widest">
-              HARSHA.DEV
-            </span>
-          )}
+          <img
+            src="/assets/Logo.png"
+            alt="Harsha.dev"
+            className="h-9 w-auto object-contain"
+            style={{ filter: "drop-shadow(0 0 6px rgba(0,255,136,0.7))" }}
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+              e.currentTarget.nextSibling.style.display = "block";
+            }}
+          />
+          <span
+            className="font-orbitron text-sm font-black text-emerald-400 tracking-widest"
+            style={{ display: "none" }}
+          >
+            HARSHA.DEV
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -82,7 +85,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA Button desktop */}
+        {/* CTA Button desktop — PDF from public/ */}
         <a
           href="/harsha_vardhan_resume.pdf"
           target="_blank"

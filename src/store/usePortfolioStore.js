@@ -7,8 +7,11 @@ export const usePortfolioStore = create((set, get) => ({
   soundOn: false,
   activeTheme: "zoro_emerald",
 
+  // setSoundOn allows external code (useAudioController) to set exact state
+  setSoundOn: (val) => set({ soundOn: val }),
+
   toggleSound: () => set((state) => ({ soundOn: !state.soundOn })),
-  
+
   setTheme: (themeId) => set({ activeTheme: themeId }),
 
   triggerUnlock: (id) => {
@@ -17,15 +20,6 @@ export const usePortfolioStore = create((set, get) => ({
 
     const ach = achievements.find((a) => a.id === id);
     if (!ach) return;
-
-    // Play unlock sound if sound is active
-    if (get().soundOn) {
-      try {
-        const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/2019/2019-84.wav");
-        audio.volume = 0.2;
-        audio.play();
-      } catch (e) {}
-    }
 
     set({
       unlocked: [...unlocked, id],
