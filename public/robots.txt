@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /auth/
 
-Sitemap: https://portfolio-beta-livid-zahsjif86i.vercel.app/sitemap.xml
+Sitemap: https://3-d-portfolio-r2sfqdje3-harshas-projects-462d12b3.vercel.app/sitemap.xml
