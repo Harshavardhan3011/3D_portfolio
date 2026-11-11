@@ -2,7 +2,7 @@
 
 A cinematic, anime-inspired portfolio combining my identity as a developer and gamer. Built with React, Vite and Three.js, this website features interactive 3D scenes, motion effects, a skill matrix, project showcases and a dedicated gaming section.
 
-![Harsha Vardhan Personal Developer Portfolio Preview](src/assets/portfolioimg1.png)
+![Harsha Vardhan Personal Developer Portfolio Preview](src/assets/portfolioimg)
 
 **[View Live Portfolio](https://portfolio-beta-livid-zahsjif86i.vercel.app/)** | **[GitHub Repository](https://github.com/Harshavardhan3011/3D_portfolio)**
 
