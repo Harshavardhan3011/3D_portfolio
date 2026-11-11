@@ -2,7 +2,7 @@
 
 A cinematic, anime-inspired portfolio combining my identity as a developer and gamer. Built with React, Vite and Three.js, this website features interactive 3D scenes, motion effects, a skill matrix, project showcases and a dedicated gaming section.
 
-![Portfolio Preview](src/assets/portfolioimg.png)
+![Harsha Vardhan Personal Developer Portfolio Preview](src/assets/portfolioimg1.png)
 
 **[View Live Portfolio](https://portfolio-beta-livid-zahsjif86i.vercel.app/)** | **[GitHub Repository](https://github.com/Harshavardhan3011/3D_portfolio)**
 
@@ -152,6 +152,12 @@ This project is configured for Vercel deployment.
 - **Output Directory:** `dist`
 
 The `vercel.json` file includes a rewrite rule to support client-side routing.
+
+## 🎮 Gaming Identity – DxC Zoro
+
+Gaming is an important part of my creative identity and inspires the visual language of this portfolio. The website includes a dedicated **Gaming Arena** where that side of my work and interests comes to life.
+
+![Harsha Vardhan Gaming Profile – DxC Zoro](src/assets/portfolioimg)
 
 ## 👨‍💻 About the Developer
 
