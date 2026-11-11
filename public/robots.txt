@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /auth/
+
+Sitemap: https://portfolio-beta-livid-zahsjif86i.vercel.app/sitemap.xml
