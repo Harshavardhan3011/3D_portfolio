@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const SITE_URL = "https://3-d-portfolio-r2sfqdje3-harshas-projects-462d12b3.vercel.app";
+const SITE_URL = "https://3-d-portfolio-zeta-seven.vercel.app";
 const DEFAULT_DESCRIPTION =
   "Explore Harsha Vardhan's developer portfolio, featuring web development projects, technical skills, experience, and expertise in React, JavaScript, Node.js, and modern web technologies.";
 

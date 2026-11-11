@@ -4,7 +4,7 @@ A cinematic, anime-inspired portfolio combining my identity as a developer and g
 
 ![Harsha Vardhan Personal Developer Portfolio Preview](src/assets/portfolioimg)
 
-**[View Live Portfolio](https://portfolio-beta-livid-zahsjif86i.vercel.app/)** | **[GitHub Repository](https://github.com/Harshavardhan3011/3D_portfolio)**
+**[View Live Portfolio](https://3-d-portfolio-zeta-seven.vercel.app/)** | **[GitHub Repository](https://github.com/Harshavardhan3011/3D_portfolio)**
 
 ---
 
@@ -147,7 +147,7 @@ Also verify that failed email requests display an error rather than a success me
 
 This project is configured for Vercel deployment.
 
-- **Live Website:** https://portfolio-beta-livid-zahsjif86i.vercel.app/
+- **Live Website:** https://3-d-portfolio-zeta-seven.vercel.app/
 - **Build Command:** `npm run build`
 - **Output Directory:** `dist`
 
